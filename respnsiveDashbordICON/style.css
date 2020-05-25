@@ -1,0 +1,160 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Comfortaa', cursive;
+  background-color: #f9fcfb;
+}
+
+nav{
+  display: flex;
+  background-color: #333333;
+  /* padding: 20px 0; */
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: sticky;
+  top: 0px;
+  opacity: 1;
+}
+
+nav h4 img{
+  width: 20px;
+}
+
+nav .logo{
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
+  color: #fff;
+  order: 3;
+  margin: auto;
+}
+
+nav ul{
+  display: flex;
+  width: 200px;
+  position: absolute;
+  left: 0;
+  height: 729px;
+  top: 60px;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column-reverse;
+  background-color: #f9fcfb;
+  z-index: -1;
+  transition: all .2s;
+  opacity: 1;
+}
+nav ul li{
+  display: flex;
+  height: 22px;
+  width: 100px;
+  line-height: 22px;
+}
+nav ul li img{
+  width: 18px;
+  margin: 0 5px;
+}
+
+nav ul li:nth-child(1){order: 7;}
+nav ul li:nth-child(2){order: 6;}
+nav ul li:nth-child(3){order: 5;}
+nav ul li:nth-child(4){order: 4;}
+nav ul li:nth-child(5){order: 3;}
+nav ul li:nth-child(6){order: 2;}
+nav ul li:nth-child(7){order: 1;}
+nav ul li{list-style: none;}
+
+nav ul.slide{
+  transform: translateX(-100%);
+  opacity: 0;
+  }    
+nav ul li a{
+  color: #1b262c;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+nav ul li a:hover{
+  color: #000; 
+  font-weight: bolder;
+}
+
+/* Hamburger Menu */
+.menu-toggle{
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  height: 14px;
+  justify-content: space-between;
+  position: relative;
+}
+.menu-toggle input{
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  opacity: 0;
+  left: -5px;
+  top: -3px;
+  z-index: 2;
+  cursor: pointer;
+}
+.menu-toggle span{
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #f9fcfb;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+/* Animasi Hamburger Menu */
+.menu-toggle span:nth-child(2){
+  transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(4){
+  transform-origin: 0 100%;
+}
+.menu-toggle input:checked~span:nth-child(2){
+  transform: rotate(40deg) translate(-1px,0px);
+  background-color: #fff;
+  width: 20px;
+}
+.menu-toggle input:checked~span:nth-child(4){
+  transform: rotate(-40deg) translate(0px,-1px);
+  background-color: #fff;
+  width: 20px;
+}
+.menu-toggle input:checked~span:nth-child(3){
+  opacity: 0;
+  transform: scale(0);
+}
+.menu-toggle input:checked~.slide li:nth-child(1){
+  display: none;
+}
+
+
+/* Ukuran Tablet */
+@media screen and (max-width: 768px){
+
+}
+/* Ukuran Mobile */
+@media screen and (max-width: 576px){
+
+}
+
+
+
+
+.testBody{
+  margin: 12px 50px;
+  position: relative;
+  transition: all .2s;
+}
+
+.testBody2{
+  margin-left: 250px;
+
+}
