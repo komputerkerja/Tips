@@ -11,7 +11,6 @@ app.use(express.static("public"));
 const websocket = WebSocket(server);
 websocket.on("connection", ws => {
     console.log("made socket connection", ws.id);
-    ws.on("close",()=>console.log(ws.id, " Leaved"))
     ws.on("chat", data => {
         console.log(data);
         websocket.sockets.emit("chat", data);
