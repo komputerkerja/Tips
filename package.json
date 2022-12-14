@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/komputerkerja/Tips#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "mqtt": "^4.2.8",
     "socket.io": "^4.1.3"
   },
